@@ -9,16 +9,16 @@
     <h1><%= title %></h1>
 
     <% if(who){ %>
-    <p>歡迎回來! <%=who %></p>
-    <a href="/articles">發表文章<a>
+      <p>歡迎回來! <%=who %></p>
+      <a href="/articles">發表文章<a>
 
     <% } else { %>
-    <form method="post" action="/verify">
-      <p>
-        名稱：<input type="text" id="username" name="username"/>
-        <input type="submit" value="登入"/>
-      </p>
-    </form>
+      <form method="post" action="/verify">
+        <p>
+          名稱：<input type="text" name="username"/>
+          <input type="submit" value="登入"/>
+        </p>
+      </form>
     <% } %>
   </body>
 </html>

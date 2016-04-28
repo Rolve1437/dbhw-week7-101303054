@@ -6,19 +6,22 @@
   </head>
   <body>
 
-    <h1><%= title %></h1>
+  <h1><%= title %></h1>
+
+  <% if(articleTitle){ %>
     <p>文章標題：<%= articleTitle %></p>
     <p>文章內文：<%= content %></p>
 
     <hr/>
+  <% } %>
 
     <form action="/articles/send" method="post">
-      <p>標題</p>
-      <input type="text" id="articleTitle" name="articleTitle"/>
-      <p>內文</p>
-      <textarea id="content" name="content" rows="15" cols="50"></textarea>
+      <p>標題：</p>
+      <input type="text" name="articleTitle"/>
+      <p>內文：</p>
+      <textarea name="content" rows="15" cols="50"></textarea>
       <p>發文者： <%= author %> </p>
-      <input type="submit" value="送出">
+      <input type="submit" value="發佈">
     </form>
     <br/>
     <a href="/">回首頁<a>
